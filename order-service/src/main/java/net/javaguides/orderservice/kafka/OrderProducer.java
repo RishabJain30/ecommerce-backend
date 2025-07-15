@@ -31,5 +31,6 @@ public class OrderProducer {
                 .withPayload(event)
                 .setHeader(KafkaHeaders.TOPIC, topic.name())
                 .build();
+        kafkaTemplate.send(message);
     }
 }
